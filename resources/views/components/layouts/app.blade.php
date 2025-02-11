@@ -35,8 +35,6 @@
     <!-- ChartJS -->
     <script src="{{ asset('style') }}/plugins/chart.js/Chart.min.js"></script>
 
-    <!-- AdminLTE for demo purposes -->
-    <script src="{{ asset('style') }}/dist/js/demo.js"></script>
     <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
     <script src="{{ asset('style') }}/dist/js/pages/dashboard2.js"></script>
 
@@ -46,11 +44,6 @@
 <body class="text-sm hold-transition light-mode sidebar-mini layout-fixed layout-navbar-fixed layout-footer-fixed">
     <div class="wrapper">
 
-        <!-- Preloader -->
-        {{-- <div class="preloader flex-column justify-content-center align-items-center">
-            <img class="animation__wobble" src="{{ asset('style') }}/dist/img/AdminLTELogo.png" alt="AdminLTELogo"
-                height="60" width="60">
-        </div> --}}
 
         <!-- Navbar -->
         <livewire:komponen.navbar-menu />
