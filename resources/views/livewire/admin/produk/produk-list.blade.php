@@ -69,7 +69,7 @@
                     <div class="p-0 m-0 row">
                         @foreach ($data_produk as $item)
                             <div class="p-1 m-0 col-6 col-sm-4 col-md-3 col-lg-3 col-xl-2">
-                                <a href="#">
+                                <a href="{{ route('produk.detail', $item->id) }}">
                                     <div class=" p-0 m-0 card">
                                         <img src="{{ asset('style/dist/img/prod-1.jpg') }}" class="card-img-top"
                                             alt="...">
