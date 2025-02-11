@@ -11,11 +11,13 @@ use Livewire\Component;
 class ProdukDetail extends Component
 {
     public $id;
+    public $KETERANGAN;
 
     public function render()
     {
         return view('livewire.admin.produk.produk-detail', [
-            'produk' => Produk::find($this->id)
+            'produk' => Produk::find($this->id),
+            'produk_relasi' => Produk::where('kdbr', 'like', '%1770A338%')->get(),
         ]);
     }
 }
