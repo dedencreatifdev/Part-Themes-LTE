@@ -47,10 +47,7 @@
                                 <i class="fas fa-share"></i>
                             </button>
                         </div>
-                        <!-- /.btn-group -->
-                        <button type="button" class="btn btn-default btn-sm">
-                            <i class="fas fa-sync-alt"></i>
-                        </button>
+                        
                         <div class="float-right">
                             <div class="input-group input-group-sm">
                                 <input type="text" class="form-control" placeholder="Cari Produk..."
