@@ -17,7 +17,7 @@ class ProdukDetail extends Component
     {
         return view('livewire.admin.produk.produk-detail', [
             'produk' => Produk::find($this->id),
-            'produk_relasi' => Produk::where('kdbr', 'like', '%1770A338%')->get(),
+            'produk_relasi' => Produk::where('kdbr', 'like', '%' . $this->id . '%')->get(),
         ]);
     }
 }
