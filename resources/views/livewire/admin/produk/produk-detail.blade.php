@@ -28,6 +28,7 @@
 
                     <hr>
                     <h4>Sparepart Relasi</h4>
+                    <p></p>
                     <div class="btn-group btn-group-toggle" data-toggle="buttons">
                         @foreach ($produk_relasi as $item_relasi)
                             <label class="text-center btn btn-default active">
@@ -83,7 +84,7 @@
                                 <tr>
                                     <td>1</td>
                                     <td>KG4W</td>
-                                    <td>All New Pajero Sp 2.4L Dakar (4X2) A/T</td>
+                                    <td>All New Pajero  Sp 2.4L Dakar (4X2) A/T Sp 2.4L Dakar (4X2) A/T Sp 2.4L Dakar (4X2) A/T</td>
                                     <td>2022</td>
                                 </tr>
                             </tbody>
@@ -91,14 +92,14 @@
                     </div>
 
                     <div class="px-3 py-2 mt-4 bg-gray">
+                        <h4 class="mt-0">
+                            <small>
+                                Satuan : {{ $produk->SATUAN }}
+                            </small>
+                        </h4>
                         <h2 class="mb-0">
                            Rp {{ number_format($produk->HRG_JUAL,2) }}
                         </h2>
-                        <h4 class="mt-0">
-                            <small>
-                                {{ $produk->SATUAN }}
-                            </small>
-                        </h4>
                     </div>
 
                     <div class="mt-4">
