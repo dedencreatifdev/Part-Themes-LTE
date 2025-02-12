@@ -47,11 +47,11 @@
                                 <i class="fas fa-share"></i>
                             </button>
                         </div>
-                        
+
                         <div class="float-right">
                             <div class="input-group input-group-sm">
                                 <input type="text" class="form-control" placeholder="Cari Produk..."
-                                wire:model.live='search'>
+                                    wire:model.live='search'>
                                 <div class="input-group-append">
                                     <div class="btn btn-primary">
                                         <i class="fas fa-search"></i>
@@ -65,12 +65,13 @@
 
                     <div class="p-0 m-0 row">
                         @foreach ($data_produk as $item)
-                            <div class="p-1 m-0 col-6 col-sm-4 col-md-3 col-lg-3 col-xl-2">
-                                <a href="{{ route('produk.detail', $item->id) }}">
-                                    <div class=" p-0 m-0 card">
-                                        <img src="{{ asset('style/dist/img/prod-1.jpg') }}" class="card-img-top"
-                                            alt="...">
-                                        <div class="card-body p-2">
+                            <div class="p-1 m-0 col-6 col-sm-5 col-md-4 col-lg-3 col-xl-2">
+                                <a wire:navigate href="{{ route('produk.detail', $item->id) }}">
+                                    <div class="p-0 m-0 card">
+                                        <img src="@if ($item->image) {{ asset('storage/' . $item->image) }}
+                        @else https://budiberlianmotor.co.id/wp-content/uploads/logo-wa-scaled.jpg @endif"
+                                            class="card-img-top" alt="..." style="height: 180px;">
+                                        <div class="p-2 card-body">
                                             <h5 class="card-title text-dark text-bold">{{ $item->KDBR }}</h5>
                                             <p class="card-text text-dark">
                                                 {{ $item->NAMA }}
@@ -87,9 +88,9 @@
                                                 <br>
                                             </p>
                                         </div>
-                                        <div class="card-footer p-1">
+                                        <div class="p-1 card-footer">
                                             <a href="#" class="btn btn-primary btn-xs"><i
-                                                    class="nav-icon fas fa-file mr-2"></i>Detail</a>
+                                                    class="mr-2 nav-icon fas fa-file"></i>Detail</a>
 
                                         </div>
                                     </div>
@@ -98,8 +99,8 @@
                         @endforeach
                     </div>
                 </div>
-                <div class="card-footer">
-
+                <div class="p-2 card-footer">
+                    {{ $data_produk->links() }}
                 </div>
             </div>
         </div>

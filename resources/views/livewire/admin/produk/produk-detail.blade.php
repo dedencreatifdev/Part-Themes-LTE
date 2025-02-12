@@ -7,7 +7,9 @@
                     <h3 class="d-inline-block d-sm-none">{{ $produk->KDBR }}
                     </h3>
                     <div class="col-12">
-                        <img src="{{ asset('style') }}/dist/img/prod-1.jpg" class="product-image" alt="Product Image">
+                        <img src="@if ($produk->image) {{ asset('storage/' . $produk->image) }}
+                        @else https://budiberlianmotor.co.id/wp-content/uploads/logo-wa-scaled.jpg @endif"
+                            class="product-image" alt="Product Image">
                     </div>
                     <div class="col-12 product-image-thumbs">
                         <div class="product-image-thumb active"><img src="{{ asset('style') }}/dist/img/prod-1.jpg"
@@ -43,33 +45,6 @@
                     </div>
 
                     <h4 class="mt-3"><small>Type Kendaraan</small></h4>
-                    {{-- <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                        <label class="text-center btn btn-default">
-                            <input type="radio" name="color_option" id="color_option_b1" autocomplete="off">
-                            <span class="text-xl">S</span>
-                            <br>
-                            {{ $relasiProduk }}
-                        </label>
-                        <label class="text-center btn btn-default">
-                            <input type="radio" name="color_option" id="color_option_b2" autocomplete="off">
-                            <span class="text-xl">M</span>
-                            <br>
-                            Medium
-                        </label>
-                        <label class="text-center btn btn-default">
-                            <input type="radio" name="color_option" id="color_option_b3" autocomplete="off">
-                            <span class="text-xl">L</span>
-                            <br>
-                            Large
-                        </label>
-                        <label class="text-center btn btn-default">
-                            <input type="radio" name="color_option" id="color_option_b4" autocomplete="off">
-                            <span class="text-xl">XL</span>
-                            <br>
-                            Xtra-Large
-                        </label>
-                    </div> --}}
-
                     <div class="table-responsive">
                         <table class="table table-striped table-sm table-bordered">
                             <thead>
@@ -84,7 +59,7 @@
                                 <tr>
                                     <td>1</td>
                                     <td>KG4W</td>
-                                    <td>All New Pajero  Sp 2.4L Dakar (4X2) A/T Sp 2.4L Dakar (4X2) A/T Sp 2.4L Dakar (4X2) A/T</td>
+                                    <td>All New Pajero Sp 2.4L Dakar (4X2) A/T</td>
                                     <td>2022</td>
                                 </tr>
                             </tbody>
@@ -98,17 +73,17 @@
                             </small>
                         </h4>
                         <h2 class="mb-0">
-                           Rp {{ number_format($produk->HRG_JUAL,2) }}
+                            Rp {{ number_format($produk->HRG_JUAL, 2) }}
                         </h2>
                     </div>
 
                     <div class="mt-4">
-                        <div class="btn btn-primary btn-lg btn-flat">
+                        <div class="btn btn-primary btn-lg btn-flat btn-sm">
                             <i class="mr-2 fas fa-cart-plus fa-lg"></i>
-                            Add to Cart
+                            Order
                         </div>
 
-                        <div class="btn btn-default btn-lg btn-flat">
+                        <div class="btn btn-default btn-lg btn-flat btn-sm">
                             <i class="mr-2 fas fa-heart fa-lg"></i>
                             Add to Wishlist
                         </div>
@@ -139,9 +114,8 @@
                         <a class="nav-item nav-link" id="product-comments-tab" data-toggle="tab"
                             href="#product-comments" role="tab" aria-controls="product-comments"
                             aria-selected="false">Comments</a>
-                        <a class="nav-item nav-link" id="product-rating-tab" data-toggle="tab"
-                            href="#product-rating" role="tab" aria-controls="product-rating"
-                            aria-selected="false">Rating</a>
+                        <a class="nav-item nav-link" id="product-rating-tab" data-toggle="tab" href="#product-rating"
+                            role="tab" aria-controls="product-rating" aria-selected="false">Rating</a>
                     </div>
                 </nav>
                 <div class="p-3 tab-content" id="nav-tabContent">
@@ -169,8 +143,8 @@
                         dui sit amet eros. Nulla turpis lorem, dignissim a sapien eget, ultrices venenatis
                         dolor. Curabitur vel turpis at magna elementum hendrerit vel id dui. Curabitur a ex
                         ullamcorper, ornare velit vel, tincidunt ipsum. </div>
-                    <div class="tab-pane fade" id="product-rating" role="tabpanel"
-                        aria-labelledby="product-rating-tab"> Cras ut ipsum ornare, aliquam ipsum non,
+                    <div class="tab-pane fade" id="product-rating" role="tabpanel" aria-labelledby="product-rating-tab">
+                        Cras ut ipsum ornare, aliquam ipsum non,
                         posuere elit. In hac habitasse platea dictumst. Aenean elementum leo augue, id
                         fermentum risus efficitur vel. Nulla iaculis malesuada scelerisque. Praesent vel
                         ipsum felis. Ut molestie, purus aliquam placerat sollicitudin, mi ligula euismod

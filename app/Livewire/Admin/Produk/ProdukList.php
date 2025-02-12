@@ -18,7 +18,8 @@ class ProdukList extends Component
     {
         $data_produk = Produk::where('kdbr', 'like', '%' . $this->search . '%')
             ->orWhere('nama', 'like', '%' . $this->search . '%')
-            ->paginate(18);
+            // ->cursorPaginate(24);
+            ->paginate(24);
         return view('livewire.admin.produk.produk-list', compact('data_produk'));
     }
 }
