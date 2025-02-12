@@ -30,61 +30,38 @@
                     <h4>Sparepart Relasi</h4>
                     <div class="btn-group btn-group-toggle" data-toggle="buttons">
                         @foreach ($produk_relasi as $item_relasi)
-                        <label class="btn btn-default text-center active">
-                            <input type="radio" name="color_option" id="color_option_a1" autocomplete="off" checked>
-                            {{ $item_relasi->KDBR }}
-                            <br>
-                            {{-- <i class="fas fa-circle fa-2x text-green"></i> --}}
-                        </label>
-
+                            <label class="text-center btn btn-default active">
+                                <input type="radio" name="color_option" id="color_option_a1" autocomplete="off"
+                                    checked>
+                                {{ $item_relasi->KDBR }}
+                                <br>
+                                <i class="fas fa-circle fa-2x text-green"></i>
+                            </label>
                         @endforeach
-                        {{-- <label class="btn btn-default text-center">
-                            <input type="radio" name="color_option" id="color_option_a2" autocomplete="off">
-                            Blue
-                            <br>
-                            <i class="fas fa-circle fa-2x text-blue"></i>
-                        </label>
-                        <label class="btn btn-default text-center">
-                            <input type="radio" name="color_option" id="color_option_a3" autocomplete="off">
-                            Purple
-                            <br>
-                            <i class="fas fa-circle fa-2x text-purple"></i>
-                        </label>
-                        <label class="btn btn-default text-center">
-                            <input type="radio" name="color_option" id="color_option_a4" autocomplete="off">
-                            Red
-                            <br>
-                            <i class="fas fa-circle fa-2x text-red"></i>
-                        </label>
-                        <label class="btn btn-default text-center">
-                            <input type="radio" name="color_option" id="color_option_a5" autocomplete="off">
-                            Orange
-                            <br>
-                            <i class="fas fa-circle fa-2x text-orange"></i>
-                        </label> --}}
+
                     </div>
 
                     <h4 class="mt-3">Size <small>Please select one</small></h4>
                     <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                        <label class="btn btn-default text-center">
+                        <label class="text-center btn btn-default">
                             <input type="radio" name="color_option" id="color_option_b1" autocomplete="off">
                             <span class="text-xl">S</span>
                             <br>
-                            Small
+                            {{ $relasiProduk }}
                         </label>
-                        <label class="btn btn-default text-center">
+                        <label class="text-center btn btn-default">
                             <input type="radio" name="color_option" id="color_option_b2" autocomplete="off">
                             <span class="text-xl">M</span>
                             <br>
                             Medium
                         </label>
-                        <label class="btn btn-default text-center">
+                        <label class="text-center btn btn-default">
                             <input type="radio" name="color_option" id="color_option_b3" autocomplete="off">
                             <span class="text-xl">L</span>
                             <br>
                             Large
                         </label>
-                        <label class="btn btn-default text-center">
+                        <label class="text-center btn btn-default">
                             <input type="radio" name="color_option" id="color_option_b4" autocomplete="off">
                             <span class="text-xl">XL</span>
                             <br>
@@ -92,23 +69,25 @@
                         </label>
                     </div>
 
-                    <div class="bg-gray py-2 px-3 mt-4">
+                    <div class="px-3 py-2 mt-4 bg-gray">
                         <h2 class="mb-0">
-                            $80.00
+                           Rp {{ number_format($produk->HRG_JUAL,2) }}
                         </h2>
                         <h4 class="mt-0">
-                            <small>Ex Tax: $80.00 </small>
+                            <small>
+                                {{ $produk->SATUAN }}
+                            </small>
                         </h4>
                     </div>
 
                     <div class="mt-4">
                         <div class="btn btn-primary btn-lg btn-flat">
-                            <i class="fas fa-cart-plus fa-lg mr-2"></i>
+                            <i class="mr-2 fas fa-cart-plus fa-lg"></i>
                             Add to Cart
                         </div>
 
                         <div class="btn btn-default btn-lg btn-flat">
-                            <i class="fas fa-heart fa-lg mr-2"></i>
+                            <i class="mr-2 fas fa-heart fa-lg"></i>
                             Add to Wishlist
                         </div>
                     </div>
@@ -130,12 +109,11 @@
 
                 </div>
             </div>
-            <div class="row mt-4">
+            <div class="mt-4 row">
                 <nav class="w-100">
                     <div class="nav nav-tabs" id="product-tab" role="tablist">
-                        <a class="nav-item nav-link active" id="product-desc-tab" data-toggle="tab"
-                            href="#product-desc" role="tab" aria-controls="product-desc"
-                            aria-selected="true">Description</a>
+                        <a class="nav-item nav-link active" id="product-desc-tab" data-toggle="tab" href="#product-desc"
+                            role="tab" aria-controls="product-desc" aria-selected="true">Description</a>
                         <a class="nav-item nav-link" id="product-comments-tab" data-toggle="tab"
                             href="#product-comments" role="tab" aria-controls="product-comments"
                             aria-selected="false">Comments</a>
@@ -144,7 +122,7 @@
                             aria-selected="false">Rating</a>
                     </div>
                 </nav>
-                <div class="tab-content p-3" id="nav-tabContent">
+                <div class="p-3 tab-content" id="nav-tabContent">
                     <div class="tab-pane fade show active" id="product-desc" role="tabpanel"
                         aria-labelledby="product-desc-tab"> Lorem ipsum dolor sit amet, consectetur
                         adipiscing elit. Morbi vitae condimentum erat. Vestibulum ante ipsum primis in

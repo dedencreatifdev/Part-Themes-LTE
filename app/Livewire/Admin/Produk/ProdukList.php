@@ -13,6 +13,7 @@ class ProdukList extends Component
 {
     use WithPagination;
     public $search;
+
     public function render()
     {
         $data_produk = Produk::where('kdbr', 'like', '%' . $this->search . '%')

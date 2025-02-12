@@ -11,13 +11,28 @@ use Livewire\Component;
 class ProdukDetail extends Component
 {
     public $id;
-    public $KETERANGAN;
 
     public function render()
     {
         return view('livewire.admin.produk.produk-detail', [
             'produk' => Produk::find($this->id),
-            'produk_relasi' => Produk::where('kdbr', 'like', '%' . $this->id . '%')->get(),
+            'produk_relasi' => Produk::where('keterangan', 'like', '%' . $this->relasiProduk() . '%')
+                ->orWhere('kdbr', 'like', '%' . $this->relasiProduk() . '%')
+                ->orWhere('nama', 'like', '%' . $this->relasiProduk() . '%')
+                ->WhereNot('KDGROUP', '=', 'sm')
+                ->get(),
+            'relasiProduk' => $this->relasiProduk()
         ]);
+    }
+
+    public function mount($id)
+    {
+        $this->id = $id;
+    }
+
+    public function relasiProduk()
+    {
+        $relasiProduk = Produk::find($this->id);
+        return $relasiProduk->KDBR;
     }
 }
