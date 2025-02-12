@@ -4,7 +4,7 @@
         <div class="card-body">
             <div class="row">
                 <div class="col-12 col-sm-6">
-                    <h3 class="d-inline-block d-sm-none">dede
+                    <h3 class="d-inline-block d-sm-none">{{ $produk->KDBR }}
                     </h3>
                     <div class="col-12">
                         <img src="{{ asset('style') }}/dist/img/prod-1.jpg" class="product-image" alt="Product Image">
@@ -22,8 +22,8 @@
                                 alt="Product Image"></div>
                     </div>
                 </div>
-                <div class="col-12 col-sm-6">
-                    <h3 class="my-3">{{ $produk->KDBR }}</h3>
+                <div class="col-12 col-sm-6 ">
+                    <h3 class="my-3 d-none d-sm-block">{{ $produk->KDBR }}</h3>
                     <p>{{ $produk->NAMA }}.</p>
 
                     <hr>
