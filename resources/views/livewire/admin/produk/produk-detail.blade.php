@@ -24,7 +24,7 @@
                 </div>
                 <div class="col-12 col-sm-6 ">
                     <h3 class="my-3 d-none d-sm-block">{{ $produk->KDBR }}</h3>
-                    <p>{{ $produk->NAMA }}.</p>
+                    <h5>{{ $produk->NAMA }}</h5>
 
                     <hr>
                     <h4>Sparepart Relasi</h4>
