@@ -29,8 +29,8 @@
                     <h5 class="my-2">{{ $produk->NAMA }}</h5>
 
                     <hr>
-                    <h4>Sparepart Relasi</h4>
-                    <p></p>
+                    <h4 class="mt-3"><small>Produk Deskripsi</small></h4>
+                    <p>Sparepart Relasi</p>
                     <div class="btn-group btn-group-toggle" data-toggle="buttons">
                         @foreach ($produk_relasi as $item_relasi)
                             <label class="text-center btn btn-default active">
@@ -43,6 +43,9 @@
                         @endforeach
 
                     </div>
+
+                    <h4 class="mt-3"><small>Sparepart Relasi</small></h4>
+                    <p>Sparepart Relasi</p>
 
                     <h4 class="mt-3"><small>Type Kendaraan</small></h4>
                     <div class="table-responsive">
