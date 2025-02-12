@@ -70,7 +70,9 @@
                                     <div class="p-0 m-0 card">
                                         <img src="@if ($item->image) {{ asset('storage/' . $item->image) }}
                         @else https://budiberlianmotor.co.id/wp-content/uploads/logo-wa-scaled.jpg @endif"
-                                            class="card-img-top" alt="..." style="height: 180px;">
+                                            class="mx-auto img-fluid" alt="{{ $item->NAMA }}" style="height: 14rem;">
+
+
                                         <div class="p-2 card-body">
                                             <h5 class="card-title text-dark text-bold">{{ $item->KDBR }}</h5>
                                             <p class="card-text text-dark">
