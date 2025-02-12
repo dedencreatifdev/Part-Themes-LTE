@@ -25,8 +25,15 @@
                     </div>
                 </div>
                 <div class="col-12 col-sm-6 ">
-                    <h3 class="my-3 d-none d-sm-block">{{ $produk->KDBR }}</h3>
-                    <h5 class="my-2">{{ $produk->NAMA }} <small>({{ $produk->nama_umum }})</small></h5>
+                    <h3 class="my-3 d-none d-sm-block text-bold"><code>{{ $produk->KDBR }}</code></h3>
+                    <h5 class="my-2">
+                        {{ $produk->NAMA }}
+
+                        @if ($produk->nama_umum)
+                            <br>
+                            <code>{{ $produk->nama_umum }}</code>
+                        @endif
+                    </h5>
 
                     <hr>
 
@@ -44,12 +51,26 @@
 
 
                     <h4 class="mt-3"><small>Keterangan</small></h4>
-                    <ul>
-                        <li>{{ $produk->PRODUKSI }}</li>
-                        <li>{{ $produk->KDGROUP }}</li>
-                        <li>{{ $produk->KM_PAKAI }}</li>
-                        <li>{{ $produk->ID_KODE }}</li>
-                    </ul>
+                    <div class="table-responsive">
+                        <table class="table table-sm table-striped table-hover">
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Lokasi Rak</th>
+                                    <th>Produksi</th>
+                                    <th>Id Kode</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td></td>
+                                    <td>{{ $rak_lokasi->rak }}</td>
+                                    <td>{{ $produk->PRODUKSI }}</td>
+                                    <td>{{ $produk->ID_KODE }}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
 
                     <h4 class="mt-3"><small>Type Kendaraan </small><a href="/"
                             class="btn btn-xs btn-default">Lihat Semua</a></h4>

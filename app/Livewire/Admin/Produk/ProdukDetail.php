@@ -3,6 +3,7 @@
 namespace App\Livewire\Admin\Produk;
 
 use App\Models\Produk;
+use App\Models\RakLokasi;
 use Livewire\Attributes\Title;
 use Livewire\Component;
 
@@ -17,7 +18,7 @@ class ProdukDetail extends Component
         $relasiProduk = Produk::find($this->id);
         return $relasiProduk->KDBR;
     }
-    
+
     public function render()
     {
         return view('livewire.admin.produk.produk-detail', [
@@ -27,6 +28,8 @@ class ProdukDetail extends Component
                 ->orWhere('nama', 'like', '%' . $this->relasiProduk() . '%')
                 ->WhereNot('KDGROUP', '=', 'sm')
                 ->get(),
+            'rak_lokasi' => RakLokasi::where('kdbr', 'like', '%' . $this->relasiProduk() . '%')
+                ->first(),
             'relasiProduk' => $this->relasiProduk()
         ]);
     }
@@ -35,5 +38,4 @@ class ProdukDetail extends Component
     {
         $this->id = $id;
     }
-
 }
