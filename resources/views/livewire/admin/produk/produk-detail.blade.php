@@ -41,8 +41,8 @@
 
                     </div>
 
-                    <h4 class="mt-3">Size <small>Please select one</small></h4>
-                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                    <h4 class="mt-3"><small>Type Kendaraan</small></h4>
+                    {{-- <div class="btn-group btn-group-toggle" data-toggle="buttons">
                         <label class="text-center btn btn-default">
                             <input type="radio" name="color_option" id="color_option_b1" autocomplete="off">
                             <span class="text-xl">S</span>
@@ -67,6 +67,27 @@
                             <br>
                             Xtra-Large
                         </label>
+                    </div> --}}
+
+                    <div class="table-responsive">
+                        <table class="table table-striped table-sm table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Type</th>
+                                    <th>Nama</th>
+                                    <th>Tahun</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>KG4W</td>
+                                    <td>All New Pajero Sp 2.4L Dakar (4X2) A/T</td>
+                                    <td>2022</td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
 
                     <div class="px-3 py-2 mt-4 bg-gray">

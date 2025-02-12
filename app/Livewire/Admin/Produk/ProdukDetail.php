@@ -12,6 +12,12 @@ class ProdukDetail extends Component
 {
     public $id;
 
+    public function relasiProduk()
+    {
+        $relasiProduk = Produk::find($this->id);
+        return $relasiProduk->KDBR;
+    }
+    
     public function render()
     {
         return view('livewire.admin.produk.produk-detail', [
@@ -30,9 +36,4 @@ class ProdukDetail extends Component
         $this->id = $id;
     }
 
-    public function relasiProduk()
-    {
-        $relasiProduk = Produk::find($this->id);
-        return $relasiProduk->KDBR;
-    }
 }
