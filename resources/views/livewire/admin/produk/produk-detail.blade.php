@@ -26,28 +26,33 @@
                 </div>
                 <div class="col-12 col-sm-6 ">
                     <h3 class="my-3 d-none d-sm-block">{{ $produk->KDBR }}</h3>
-                    <h5 class="my-2">{{ $produk->NAMA }}</h5>
+                    <h5 class="my-2">{{ $produk->NAMA }} <small>({{ $produk->nama_umum }})</small></h5>
 
                     <hr>
-                    <h4 class="mt-3"><small>Produk Deskripsi</small></h4>
-                    <p>Sparepart Relasi</p>
-                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                        @foreach ($produk_relasi as $item_relasi)
-                            <label class="text-center btn btn-default active">
-                                <input type="radio" name="color_option" id="color_option_a1" autocomplete="off"
-                                    checked>
-                                {{ $item_relasi->KDBR }}
-                                <br>
-                                <i class="fas fa-circle fa-2x text-green"></i>
-                            </label>
-                        @endforeach
 
-                    </div>
+                    <p>
+                        @if ($produk->short_deskripsi)
+                            <h4 class="mt-3"><small>Produk Deskripsi</small></h4>
+                            {{ $produk->short_deskripsi }}
+                        @else
+                            <h4 class="mt-3"><small>Tentang Kami</small></h4>
+                            MITSUBISHI MOTOR INDONESIA
+                            <br>PT.BUDI BERLIAN MOTOR <br>DEALER RESMI MITSUBISHI <br>Telp : 0721-709999 <br>Fax :
+                            0721-771305
+                        @endif
+                    </p>
 
-                    <h4 class="mt-3"><small>Sparepart Relasi</small></h4>
-                    <p>Sparepart Relasi</p>
 
-                    <h4 class="mt-3"><small>Type Kendaraan</small></h4>
+                    <h4 class="mt-3"><small>Keterangan</small></h4>
+                    <ul>
+                        <li>{{ $produk->PRODUKSI }}</li>
+                        <li>{{ $produk->KDGROUP }}</li>
+                        <li>{{ $produk->KM_PAKAI }}</li>
+                        <li>{{ $produk->ID_KODE }}</li>
+                    </ul>
+
+                    <h4 class="mt-3"><small>Type Kendaraan </small><a href="/"
+                            class="btn btn-xs btn-default">Lihat Semua</a></h4>
                     <div class="table-responsive">
                         <table class="table table-striped table-sm table-bordered">
                             <thead>
