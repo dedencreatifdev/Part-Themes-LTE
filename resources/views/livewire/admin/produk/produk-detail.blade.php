@@ -95,14 +95,16 @@
                         </table>
                     </div>
 
-                    <div class="px-3 py-2 mt-4 bg-gray">
+                    <div class="px-3 py-2 mt-4 bg-light">
                         <h4 class="mt-0">
                             <small>
                                 Satuan : {{ $produk->SATUAN }}
                             </small>
                         </h4>
                         <h2 class="mb-0">
-                            Rp {{ number_format($produk->HRG_JUAL, 2) }}
+                            <code class="text-bold">
+                                Rp {{ number_format($produk->HRG_JUAL, 2) }}
+                            </code>
                         </h2>
                     </div>
 

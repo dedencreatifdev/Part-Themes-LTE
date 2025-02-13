@@ -22,9 +22,9 @@
                                 <a href="#" class="dropdown-item">Separated link</a>
                             </div>
                         </div>
-                        <button type="button" class="btn btn-tool" data-card-widget="remove">
+                        {{-- <button type="button" class="btn btn-tool" data-card-widget="remove">
                             <i class="fas fa-times"></i>
-                        </button>
+                        </button> --}}
                     </div>
                 </div>
 
@@ -125,7 +125,8 @@
                                         <tr>
                                             <td>1</td>
                                             <td>
-                                                <a wire:navigate href="{{ route('produk.detail', $item->id) }}" class="text-dark">
+                                                <a wire:navigate href="{{ route('produk.detail', $item->id) }}"
+                                                    class="text-dark">
                                                     <div>
                                                         {{ $item->KDBR }}
                                                     </div>
@@ -133,18 +134,62 @@
 
                                             </td>
                                             <td>
-                                                <a wire:navigate href="{{ route('produk.detail', $item->id) }}" class="text-dark">
+                                                <a wire:navigate href="{{ route('produk.detail', $item->id) }}"
+                                                    class="text-dark">
                                                     <div>
                                                         {{ $item->NAMA }}
                                                     </div>
                                                 </a>
+
                                             </td>
-                                            <td>{{ $item->KDGROUP }}</td>
-                                            <td>{{ $item->PRODUKSI }}</td>
-                                            <td>{{ $item->SATUAN }}</td>
-                                            <td>{{ $this->getRakLokasi($item->KDBR) }}</td>
-                                            <td class="text-right">{{ number_format($item->HRG_JUAL, 2) }}</td>
-                                            <td>{{ $item->nama_umum }}</td>
+                                            <td>
+                                                <a wire:navigate href="{{ route('produk.detail', $item->id) }}"
+                                                    class="text-dark">
+                                                    <div>
+                                                        {{ $item->KDGROUP }}
+                                                    </div>
+                                                </a>
+                                            </td>
+                                            <td>
+                                                <a wire:navigate href="{{ route('produk.detail', $item->id) }}"
+                                                    class="text-dark">
+                                                    <div>
+                                                        {{ $item->PRODUKSI }}
+                                                    </div>
+                                                </a>
+                                            </td>
+                                            <td>
+                                                <a wire:navigate href="{{ route('produk.detail', $item->id) }}"
+                                                    class="text-dark">
+                                                    <div>
+                                                        {{ $item->SATUAN }}
+                                                    </div>
+                                                </a>
+                                            </td>
+                                            <td>
+                                                <a wire:navigate href="{{ route('produk.detail', $item->id) }}"
+                                                    class="text-dark">
+                                                    <div>
+                                                        {{ $this->getRakLokasi($item->KDBR) }}
+                                                    </div>
+                                                </a>
+                                            </td>
+                                            <td class="text-right">
+                                                <a wire:navigate href="{{ route('produk.detail', $item->id) }}"
+                                                    class="text-dark">
+                                                    <div>
+                                                        {{ number_format($item->HRG_JUAL, 2) }}
+                                                    </div>
+                                                </a>
+                                            </td>
+                                            <td>
+                                                <a wire:navigate href="{{ route('produk.detail', $item->id) }}"
+                                                    class="text-dark">
+                                                    <div>
+                                                        {{ $item->nama_umum }}
+                                                    </div>
+                                                </a>
+                                            </td>
                                             <td>
                                                 {{-- <a href="{{ route('produk.detail', $item->id) }}"
                                             class="btn btn-primary btn-xs"><i
