@@ -64,7 +64,7 @@
                             <tbody>
                                 <tr>
                                     <td></td>
-                                    <td>{{ $rak_lokasi->rak }}</td>
+                                    <td>{{ $this->getRakLokasi($produk->KDBR)  }}</td>
                                     <td>{{ $produk->PRODUKSI }}</td>
                                     <td>{{ $produk->ID_KODE }}</td>
                                 </tr>

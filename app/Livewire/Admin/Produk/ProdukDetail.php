@@ -34,6 +34,16 @@ class ProdukDetail extends Component
         ]);
     }
 
+    public function getRakLokasi($id)
+    {
+        $rak_lokasi = RakLokasi::where('kdbr', $id)->first();
+        if ($rak_lokasi) {
+            return $rak_lokasi->rak . ' - ' . $rak_lokasi->gudang;
+        } else {
+            return '-';
+        }
+    }
+
     public function mount($id)
     {
         $this->id = $id;
