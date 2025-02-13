@@ -125,7 +125,7 @@
                                         <tr>
                                             <td>1</td>
                                             <td>
-                                                <a wire:navigate href="{{ route('produk.detail', $item->id) }}">
+                                                <a wire:navigate href="{{ route('produk.detail', $item->id) }}" class="text-dark">
                                                     <div>
                                                         {{ $item->KDBR }}
                                                     </div>
@@ -133,7 +133,7 @@
 
                                             </td>
                                             <td>
-                                                <a wire:navigate href="{{ route('produk.detail', $item->id) }}">
+                                                <a wire:navigate href="{{ route('produk.detail', $item->id) }}" class="text-dark">
                                                     <div>
                                                         {{ $item->NAMA }}
                                                     </div>
