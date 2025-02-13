@@ -71,7 +71,7 @@
                                         <div class="p-0 m-0 card">
                                             <img src="@if ($item->image) {{ asset('storage/' . $item->image) }} @else https://budiberlianmotor.co.id/wp-content/uploads/logo-wa-scaled.jpg @endif"
                                                 class="mx-auto img-fluid" alt="{{ $item->NAMA }}"
-                                                style="height: 14rem;">
+                                                style="height: 12rem;">
 
 
                                             <div class="p-2 card-body">
