@@ -16,6 +16,12 @@
     <!-- Theme style -->
     <link rel="stylesheet" href="{{ asset('style') }}/dist/css/adminlte.min.css">
 
+    <style>
+        * {
+            /* font-size: 14px; */
+            font-family: 'tahoma';
+        }
+    </style>
     <!-- REQUIRED SCRIPTS -->
     <!-- jQuery -->
     <script src="{{ asset('style') }}/plugins/jquery/jquery.min.js"></script>
@@ -64,8 +70,12 @@
                         </div><!-- /.col -->
                         <div class="col-sm-6">
                             <ol class="breadcrumb float-sm-right">
-                                <li class="breadcrumb-item"><a href="#">Home</a></li>
-                                <li class="breadcrumb-item active">{{ $title ?? config('app.name') }}</li>
+                                {{-- <li class="breadcrumb-item"><a href="#">Home</a></li> --}}
+                                <li class="breadcrumb-item active">
+                                    <a href="{{ URL::previous() }}" >
+                                        {{ 'Kembali' ?? config('app.name') }}
+                                    </a>
+                                </li>
                             </ol>
                         </div><!-- /.col -->
                     </div><!-- /.row -->

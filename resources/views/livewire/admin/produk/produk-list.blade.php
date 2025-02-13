@@ -124,8 +124,21 @@
                                     @foreach ($list_produk_dekstop as $item)
                                         <tr>
                                             <td>1</td>
-                                            <td>{{ $item->KDBR }}</td>
-                                            <td>{{ $item->NAMA }}</td>
+                                            <td>
+                                                <a wire:navigate href="{{ route('produk.detail', $item->id) }}">
+                                                    <div>
+                                                        {{ $item->KDBR }}
+                                                    </div>
+                                                </a>
+
+                                            </td>
+                                            <td>
+                                                <a wire:navigate href="{{ route('produk.detail', $item->id) }}">
+                                                    <div>
+                                                        {{ $item->NAMA }}
+                                                    </div>
+                                                </a>
+                                            </td>
                                             <td>{{ $item->KDGROUP }}</td>
                                             <td>{{ $item->PRODUKSI }}</td>
                                             <td>{{ $item->SATUAN }}</td>
@@ -134,8 +147,8 @@
                                             <td>{{ $item->nama_umum }}</td>
                                             <td>
                                                 {{-- <a href="{{ route('produk.detail', $item->id) }}"
-                                                class="btn btn-primary btn-xs"><i
-                                                    class="mr-2 nav-icon fas fa-file"></i>Detail</a> --}}
+                                            class="btn btn-primary btn-xs"><i
+                                                class="mr-2 nav-icon fas fa-file"></i>Detail</a> --}}
                                             </td>
                                         </tr>
                                     @endforeach
